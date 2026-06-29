@@ -5,3 +5,7 @@ _site/
 *.pyc
 __pycache__/
 .DS_Store
+
+# Source files — hide raw content, expose only built HTML
+*.md
+build.py
