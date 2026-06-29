@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 70">
+  <defs>
+    <style>
+      .t {
+        font-family: Palatino, 'Palatino Linotype', Georgia, serif;
+        font-size: 30px;
+        font-style: italic;
+        fill: #2d2820;
+        text-anchor: middle;
+        filter: url(#sk);
+      }
+      .swash {
+        fill: none;
+        stroke: #5a8aaa;
+        stroke-width: 1.2;
+        stroke-linecap: round;
+        filter: url(#sk);
+        opacity: 0.6;
+      }
+      .dot {
+        fill: #5a8aaa;
+        opacity: 0.4;
+        filter: url(#sk);
+      }
+    </style>
+    <!-- Gentle wobble — enough for hand-drawn feel, not distorted -->
+    <filter id="sk" x="-5%" y="-12%" width="110%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="n" seed="41"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- Single text element with sketch filter — natural, not forced -->
+  <text class="t" x="210" y="36">Yixi's Homepage</text>
+
+  <!-- Gentle wavy underline -->
+  <path class="swash" d="M 72 50 Q 120 55, 170 48 Q 220 41, 260 50 Q 300 57, 340 48 Q 370 43, 388 50"/>
+
+  <circle class="dot" cx="66" cy="50" r="2"/>
+  <circle class="dot" cx="392" cy="50" r="2"/>
+</svg>

@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 660">
+  <defs>
+    <style>
+      /* --- Colored vinyl: warm cream/beige with visible layers --- */
+      .record-body { fill: #e8dcc8; }
+      .record-gradient { fill: url(#vinylGrad); opacity: 0.4; }
+      .record-sheen { fill: url(#sheenGrad); opacity: 0.07; }
+
+      /* Grooves — varied shades to show depth/layers */
+      .groove-dk { fill: none; stroke: #cdbb9a; stroke-width: 0.7; opacity: 0.65; }
+      .groove-md { fill: none; stroke: #d4c3a5; stroke-width: 0.5; opacity: 0.5; }
+      .groove-lt { fill: none; stroke: #dbccb2; stroke-width: 0.35; opacity: 0.35; }
+
+      /* Label */
+      .label-bg { fill: #faf7f0; stroke: #c4b898; stroke-width: 1.3; filter: url(#sketch); }
+      .label-ring { fill: none; stroke: #c4b898; stroke-width: 0.6; opacity: 0.5; filter: url(#sketch); }
+
+      /* Sectors — subtle dividing lines */
+      .sector { fill: transparent; stroke: #d0c0a0; stroke-width: 0.8; cursor: pointer; transition: fill 0.25s ease; }
+      .sector:hover { fill: rgba(180, 140, 100, 0.12); }
+
+      /* Horizontal text labels OUTSIDE the record */
+      .outer-label {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 14px;
+        font-style: italic;
+        fill: #4a3f30;
+        text-anchor: middle;
+        cursor: pointer;
+        transition: fill 0.2s;
+      }
+      .outer-label:hover { fill: #CC0033; }
+
+      /* Connector dots on label rim */
+      .connector-dot { fill: #c4b090; stroke: none; }
+
+      /* Center hole */
+      .center-hole { fill: #4a3f30; }
+
+      /* Tonearm */
+      .tonearm-base { fill: #5a4f40; stroke: #3a3020; stroke-width: 1.2; filter: url(#sketch); }
+      .tonearm-wand { fill: none; stroke: #4a3f30; stroke-width: 2.8; stroke-linecap: round; filter: url(#sketch); }
+      .tonearm-head { fill: #5a4f40; stroke: #3a3020; stroke-width: 1; filter: url(#sketch); }
+
+      /* Outer record edge */
+      .vinyl-outer { fill: none; stroke: #b8a080; stroke-width: 1.3; filter: url(#sketch); }
+
+      /* Decorative sketch marks */
+      .sketch-mark { fill: none; stroke: #b8a080; stroke-width: 0.5; opacity: 0.3; stroke-linecap: round; filter: url(#sketch); }
+    </style>
+
+    <!-- Hand-drawn wobble filter -->
+    <filter id="sketch" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="4" result="noise" seed="13"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <filter id="sketch-light" x="-1%" y="-1%" width="102%" height="102%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" result="noise" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <!-- Subtle radial gradient for vinyl depth -->
+    <radialGradient id="vinylGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d9c8a8" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#e8dcc8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#cdbb9a" stop-opacity="0.5"/>
+    </radialGradient>
+
+    <radialGradient id="sheenGrad" cx="35%" cy="28%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Groove layers: creates visible depth/texture -->
+    <g id="grooves" filter="url(#sketch-light)">
+      <circle cx="300" cy="315" r="94"  class="groove-dk"/>
+      <circle cx="300" cy="315" r="97"  class="groove-lt"/>
+      <circle cx="300" cy="315" r="100" class="groove-md"/>
+      <circle cx="300" cy="315" r="104" class="groove-lt"/>
+      <circle cx="300" cy="315" r="108" class="groove-dk"/>
+      <circle cx="300" cy="315" r="112" class="groove-md"/>
+      <circle cx="300" cy="315" r="117" class="groove-lt"/>
+      <circle cx="300" cy="315" r="122" class="groove-dk"/>
+      <circle cx="300" cy="315" r="127" class="groove-md"/>
+      <circle cx="300" cy="315" r="132" class="groove-lt"/>
+      <circle cx="300" cy="315" r="137" class="groove-dk"/>
+      <circle cx="300" cy="315" r="142" class="groove-md"/>
+      <circle cx="300" cy="315" r="147" class="groove-lt"/>
+      <circle cx="300" cy="315" r="152" class="groove-dk"/>
+      <circle cx="300" cy="315" r="157" class="groove-md"/>
+      <circle cx="300" cy="315" r="162" class="groove-lt"/>
+      <circle cx="300" cy="315" r="167" class="groove-dk"/>
+      <circle cx="300" cy="315" r="172" class="groove-md"/>
+      <circle cx="300" cy="315" r="177" class="groove-lt"/>
+      <circle cx="300" cy="315" r="182" class="groove-dk"/>
+      <circle cx="300" cy="315" r="187" class="groove-md"/>
+      <circle cx="300" cy="315" r="192" class="groove-lt"/>
+      <circle cx="300" cy="315" r="197" class="groove-dk"/>
+      <circle cx="300" cy="315" r="202" class="groove-md"/>
+    </g>
+  </defs>
+
+  <!-- ===== Outer record edge ===== -->
+  <path class="vinyl-outer"
+    d="M 300 107
+       C 414 105, 508 189, 508 315
+       C 508 440, 415 524, 300 524
+       C 184 526, 92 441, 92 315
+       C 92 190, 186 105, 300 107 Z"/>
+
+  <!-- Record body (cream vinyl) -->
+  <path class="record-body"
+    d="M 300 109
+       C 412 107, 506 191, 506 315
+       C 506 438, 413 522, 300 522
+       C 186 524, 94 439, 94 315
+       C 94 192, 188 107, 300 109 Z"/>
+
+  <!-- Depth gradient overlay -->
+  <path class="record-gradient"
+    d="M 300 109
+       C 412 107, 506 191, 506 315
+       C 506 438, 413 522, 300 522
+       C 186 524, 94 439, 94 315
+       C 94 192, 188 107, 300 109 Z"/>
+
+  <!-- Sheen -->
+  <path class="record-sheen"
+    d="M 300 109
+       C 412 107, 506 191, 506 315
+       C 506 438, 413 522, 300 522
+       C 186 524, 94 439, 94 315
+       C 94 192, 188 107, 300 109 Z"/>
+
+  <!-- Grooves -->
+  <use href="#grooves"/>
+
+  <!-- Sketch marks -->
+  <path class="sketch-mark" d="M 100 248 Q 97 242, 103 238"/>
+  <path class="sketch-mark" d="M 502 252 Q 506 247, 500 243"/>
+  <path class="sketch-mark" d="M 500 378 Q 504 374, 506 378"/>
+  <path class="sketch-mark" d="M 98 382 Q 94 378, 97 374"/>
+  <path class="sketch-mark" d="M 295 520 Q 299 524, 303 521"/>
+  <path class="sketch-mark" d="M 305 519 Q 308 523, 302 524"/>
+
+  <!-- ===== Center label ===== -->
+  <path class="label-bg"
+    d="M 300 226
+       C 347 224, 390 256, 390 315
+       C 390 374, 349 406, 300 406
+       C 250 408, 210 376, 210 315
+       C 210 255, 253 224, 300 226 Z"/>
+
+  <!-- Inner ring -->
+  <path class="label-ring"
+    d="M 300 229
+       C 344 227, 386 258, 386 315
+       C 386 372, 346 403, 300 403
+       C 253 405, 214 373, 214 315
+       C 214 258, 256 227, 300 229 Z"/>
+
+  <path class="label-ring"
+    d="M 300 278
+       C 322 277, 344 292, 344 315
+       C 344 339, 323 354, 300 354
+       C 277 355, 256 340, 256 315
+       C 256 291, 278 277, 300 278 Z"/>
+
+  <!-- ===== 5 clickable sectors ===== -->
+
+  <!-- Sector 1: CV, 270° → 342° -->
+  <a href="cv.html" aria-label="CV">
+    <path class="sector"
+      d="M 300 315 L 300 229 A 86 86 0 0 1 381.8 288.4 Z"/>
+  </a>
+
+  <!-- Sector 2: Writings, 342° → 54° -->
+  <a href="writings.html" aria-label="Writings">
+    <path class="sector"
+      d="M 300 315 L 381.8 288.4 A 86 86 0 0 1 350.5 384.6 Z"/>
+  </a>
+
+  <!-- Sector 3: Hobbies, 54° → 126° -->
+  <a href="hobbies.html" aria-label="Hobbies">
+    <path class="sector"
+      d="M 300 315 L 350.5 384.6 A 86 86 0 0 1 249.5 384.6 Z"/>
+  </a>
+
+  <!-- Sector 4: Updates, 126° → 198° -->
+  <a href="updates.html" aria-label="Updates">
+    <path class="sector"
+      d="M 300 315 L 249.5 384.6 A 86 86 0 0 1 218.2 288.4 Z"/>
+  </a>
+
+  <!-- Sector 5: Contact, 198° → 270° -->
+  <a href="contact.html" aria-label="Contact">
+    <path class="sector"
+      d="M 300 315 L 218.2 288.4 A 86 86 0 0 1 300 229 Z"/>
+  </a>
+
+  <!-- ===== Connector dots on label rim ===== -->
+  <circle cx="335" cy="236" r="3" class="connector-dot"/>   <!-- CV -->
+  <circle cx="390" cy="320" r="3" class="connector-dot"/>   <!-- Writings -->
+  <circle cx="300" cy="400" r="3" class="connector-dot"/>   <!-- Hobbies -->
+  <circle cx="210" cy="320" r="3" class="connector-dot"/>   <!-- Updates -->
+  <circle cx="265" cy="236" r="3" class="connector-dot"/>   <!-- Contact -->
+
+  <!-- ===== Horizontal text labels outside the record ===== -->
+
+  <!-- CV — top right -->
+  <a href="cv.html" aria-label="CV">
+    <text class="outer-label" x="410" y="132">CV</text>
+  </a>
+
+  <!-- Writings — right -->
+  <a href="writings.html" aria-label="Writings">
+    <text class="outer-label" x="518" y="330">Writings</text>
+  </a>
+
+  <!-- Hobbies — bottom -->
+  <a href="hobbies.html" aria-label="Hobbies">
+    <text class="outer-label" x="300" y="558">Hobbies</text>
+  </a>
+
+  <!-- Updates — left -->
+  <a href="updates.html" aria-label="Updates">
+    <text class="outer-label" x="82" y="330">Updates</text>
+  </a>
+
+  <!-- Contact — top left -->
+  <a href="contact.html" aria-label="Contact">
+    <text class="outer-label" x="190" y="132">Contact</text>
+  </a>
+
+  <!-- ===== Center hole ===== -->
+  <circle cx="300" cy="315" r="6" class="center-hole"/>
+
+  <!-- ===== Tonearm ===== -->
+  <ellipse cx="515" cy="480" rx="12" ry="10" class="tonearm-base"/>
+  <ellipse cx="515" cy="480" rx="5" ry="4" fill="#3a3020"/>
+  <path class="tonearm-wand" d="M 515 480 Q 420 450, 370 385 Q 340 340, 322 318"/>
+  <path class="tonearm-head" d="M 322 318 L 333 305 L 338 311 L 328 324 Z"/>
+  <path class="tonearm-wand" d="M 515 480 Q 533 488, 538 492" stroke-width="2"/>
+
+  <!-- Extra sketch marks -->
+  <path class="sketch-mark" d="M 213 292 Q 210 288, 215 285"/>
+  <path class="sketch-mark" d="M 390 290 Q 393 286, 388 284"/>
+  <path class="sketch-mark" d="M 286 403 Q 289 406, 292 402"/>
+  <path class="sketch-mark" d="M 314 402 Q 311 406, 308 403"/>
+
+</svg>

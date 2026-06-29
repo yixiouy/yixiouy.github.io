@@ -1,0 +1,352 @@
+/* =============================================
+   Personal Site — Vinyl Record Theme
+   Direction B: Warm-Cool Contrast
+   Crimson Text (self-hosted) + Noto Serif SC (self-hosted)
+   ============================================= */
+
+/* --- Self-hosted fonts --- */
+@font-face {
+  font-family: 'Crimson Text';
+  src: url('../fonts/CrimsonText.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif SC';
+  src: url('../fonts/NotoSerifSC.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Reset & Base --- */
+html {
+  min-height: 100%;
+  min-width: 100%;
+  -ms-text-size-adjust: none;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, code, form, fieldset, legend, input, button, textarea,
+p, blockquote, th, td, a {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+  background-repeat: no-repeat;
+}
+
+body {
+  font-family: 'Crimson Text', Palatino, 'Palatino Linotype', 'Noto Serif SC', serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #2d2820;
+  background-color: #fdfaf5;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+}
+
+/* --- Links (record blue, not Becker red) --- */
+a:link {
+  color: #5a8aaa;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 0.8px;
+}
+
+a:visited {
+  color: #7a9aaa;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #3a6a8a;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #5a8aaa;
+  text-decoration: underline;
+}
+
+a.nonblock {
+  color: #2d2820;
+  text-decoration: none;
+}
+
+/* --- Page Container --- */
+#page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 30px 60px 30px;
+}
+
+/* --- Homepage Title --- */
+.homepage-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.homepage-title .title-svg {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+}
+
+/* --- Sub-page: small site-title link (upper-left) --- */
+.site-title-sm {
+  margin-bottom: 24px;
+}
+
+.site-title-sm .title-svg-sm {
+  width: 200px;
+  height: auto;
+  opacity: 0.85;
+}
+
+.site-title-sm a { text-decoration: none; }
+
+/* --- Vinyl Record Hero --- */
+.vinyl-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.vinyl-hero .vinyl-svg {
+  display: block;
+  max-width: 550px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.vinyl-hint {
+  font-family: 'Crimson Text', Palatino, 'Noto Serif SC', serif;
+  font-size: 15px;
+  color: #a09888;
+  font-style: italic;
+  margin-top: 1px;
+  text-align: center;
+}
+
+/* --- Sub-page Header --- */
+.page-header {
+  max-width: 650px;
+  margin: 0 auto 36px auto;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e0d8c8;
+}
+
+.page-title {
+  font-family: 'Crimson Text', Palatino, 'Noto Serif SC', serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #1a1510;
+  margin-top: 4px;
+}
+
+/* --- Content Area --- */
+.content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.content h1 {
+  font-family: 'Crimson Text', Palatino, 'Noto Serif SC', serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 24px;
+  color: #1a1510;
+}
+
+.content h2 {
+  font-family: 'Crimson Text', Palatino, 'Noto Serif SC', serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  color: #1a1510;
+}
+
+.content h3 {
+  font-family: 'Crimson Text', Palatino, 'Noto Serif SC', serif;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.4;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: #1a1510;
+}
+
+.content p {
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.content ul, .content ol {
+  margin: 0 0 16px 28px;
+}
+
+.content li {
+  margin-bottom: 6px;
+  list-style-type: disc;
+}
+
+.content ol li {
+  list-style-type: decimal;
+}
+
+.content blockquote {
+  margin: 0 0 16px 0;
+  padding: 8px 20px;
+  border-left: 3px solid #d8d0c0;
+  color: #6a6050;
+  font-style: italic;
+}
+
+.content hr {
+  border: none;
+  border-top: 1px solid #e0d8c8;
+  margin: 32px 0;
+}
+
+.content em {
+  font-style: italic;
+}
+
+.content strong {
+  font-weight: 600;
+}
+
+/* --- Homepage Intro --- */
+.home-intro {
+  margin-bottom: 32px;
+}
+
+.home-intro .highlight-name {
+  font-weight: 600;
+  color: #2d2820;
+}
+
+/* --- Photo --- */
+.profile-photo {
+  text-align: center;
+  margin: 32px 0 40px 0;
+}
+
+.profile-photo img {
+  max-width: 250px;
+  height: auto;
+  filter: grayscale(0.2);
+  -webkit-filter: grayscale(0.2);
+  border-radius: 2px;
+}
+
+.profile-photo .photo-caption {
+  font-size: 14px;
+  color: #a09888;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* --- Bottom Navigation --- */
+.bottom-nav {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 28px;
+  border-top: 1px solid #e0d8c8;
+}
+
+.bottom-nav a {
+  display: inline-block;
+  margin: 0 14px 8px 14px;
+  font-family: 'Crimson Text', Palatino, 'Noto Serif SC', serif;
+  font-size: 18px;
+  color: #5a8aaa;
+  text-decoration: none;
+}
+
+.bottom-nav a:hover {
+  text-decoration: underline;
+}
+
+.bottom-nav .nav-separator {
+  color: #d0c8b8;
+  margin: 0 2px;
+}
+
+.bottom-nav .last-updated {
+  color: #b0a898;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+
+  #page {
+    padding: 20px 16px 40px 16px;
+  }
+
+  .homepage-title .title-svg {
+    max-width: 320px;
+  }
+
+  .vinyl-hero .vinyl-svg {
+    max-width: 100%;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .content h1, .page-title {
+    font-size: 22px;
+  }
+
+  .content h2 {
+    font-size: 18px;
+  }
+
+  .bottom-nav a {
+    margin: 0 6px 6px 6px;
+    font-size: 15px;
+  }
+}
+
+/* --- Print --- */
+@media print {
+  .vinyl-hero, .bottom-nav {
+    display: none;
+  }
+
+  body {
+    font-size: 12px;
+    line-height: 1.5;
+    background: #fff;
+  }
+
+  #page {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+/* --- Helper --- */
+.clearfix::after {
+  content: "\0020";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}

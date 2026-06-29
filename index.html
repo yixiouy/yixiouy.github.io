@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home — Your Name</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="page">
+
+  <!-- Hand-drawn title -->
+  <div class="homepage-title">
+    <img src="assets/images/homepage-title.svg" alt="Yixi's Homepage" class="title-svg" width="420" height="70">
+  </div>
+
+  <!-- Vinyl Record Hero Navigation (inline SVG for clickable links) -->
+  <div class="vinyl-hero">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 660" class="vinyl-svg">
+      <defs>
+        <style>
+          .rec-body { fill: #c8dae8; }
+          .rec-grad { fill: url(#vGrad); opacity: 0.4; }
+          .rec-sheen { fill: url(#sGrad); opacity: 0.07; }
+          .grv-dk { fill: none; stroke: #a8c0d4; stroke-width: 0.7; opacity: 0.6; }
+          .grv-md { fill: none; stroke: #b4cadb; stroke-width: 0.5; opacity: 0.45; }
+          .grv-lt { fill: none; stroke: #c0d4e2; stroke-width: 0.35; opacity: 0.3; }
+          .lbl-bg { fill: #f5f7fa; stroke: #9ab0c4; stroke-width: 1.3; filter: url(#sk); }
+          .lbl-ring { fill: none; stroke: #9ab0c4; stroke-width: 0.6; opacity: 0.45; filter: url(#sk); }
+          .sector { fill: transparent; stroke: #a8bed0; stroke-width: 0.8; cursor: pointer; transition: fill 0.25s; }
+          .sector:hover { fill: rgba(70, 120, 160, 0.1); }
+          a { text-decoration: none; }
+          .sect-txt { font-family: Georgia, 'Times New Roman', serif; font-size: 15px; fill: #2a3a4a; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+          .center-hole { fill: #2a3a4a; }
+          .ta-base { fill: #4a5a6a; stroke: #2a3a4a; stroke-width: 1.2; filter: url(#sk); }
+          .ta-wand { fill: none; stroke: #3a4a5a; stroke-width: 2.8; stroke-linecap: round; filter: url(#sk); }
+          .ta-head { fill: #4a5a6a; stroke: #2a3a4a; stroke-width: 1; filter: url(#sk); }
+          .v-outer { fill: none; stroke: #90a8bc; stroke-width: 1.3; filter: url(#sk); }
+          .skm { fill: none; stroke: #90a8bc; stroke-width: 0.5; opacity: 0.28; stroke-linecap: round; filter: url(#sk); }
+        </style>
+        <filter id="sk" x="-3%" y="-3%" width="106%" height="106%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="4" result="n" seed="13"/>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+        <filter id="skl" x="-1%" y="-1%" width="102%" height="102%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" result="n" seed="7"/>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="0.5" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+        <radialGradient id="vGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#b8cfe0" stop-opacity="0.6"/>
+          <stop offset="70%" stop-color="#c8dae8" stop-opacity="0.2"/>
+          <stop offset="100%" stop-color="#a8c0d4" stop-opacity="0.5"/>
+        </radialGradient>
+        <radialGradient id="sGrad" cx="35%" cy="28%" r="60%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+        </radialGradient>
+        <g id="grooves" filter="url(#skl)">
+          <circle cx="300" cy="315" r="94"  class="grv-dk"/><circle cx="300" cy="315" r="97"  class="grv-lt"/>
+          <circle cx="300" cy="315" r="100" class="grv-md"/><circle cx="300" cy="315" r="104" class="grv-lt"/>
+          <circle cx="300" cy="315" r="108" class="grv-dk"/><circle cx="300" cy="315" r="112" class="grv-md"/>
+          <circle cx="300" cy="315" r="117" class="grv-lt"/><circle cx="300" cy="315" r="122" class="grv-dk"/>
+          <circle cx="300" cy="315" r="127" class="grv-md"/><circle cx="300" cy="315" r="132" class="grv-lt"/>
+          <circle cx="300" cy="315" r="137" class="grv-dk"/><circle cx="300" cy="315" r="142" class="grv-md"/>
+          <circle cx="300" cy="315" r="147" class="grv-lt"/><circle cx="300" cy="315" r="152" class="grv-dk"/>
+          <circle cx="300" cy="315" r="157" class="grv-md"/><circle cx="300" cy="315" r="162" class="grv-lt"/>
+          <circle cx="300" cy="315" r="167" class="grv-dk"/><circle cx="300" cy="315" r="172" class="grv-md"/>
+          <circle cx="300" cy="315" r="177" class="grv-lt"/><circle cx="300" cy="315" r="182" class="grv-dk"/>
+          <circle cx="300" cy="315" r="187" class="grv-md"/><circle cx="300" cy="315" r="192" class="grv-lt"/>
+          <circle cx="300" cy="315" r="197" class="grv-dk"/><circle cx="300" cy="315" r="202" class="grv-md"/>
+        </g>
+      </defs>
+
+      <!-- Outer edge -->
+      <path class="v-outer" d="M 300 107 C 414 105, 508 189, 508 315 C 508 440, 415 524, 300 524 C 184 526, 92 441, 92 315 C 92 190, 186 105, 300 107 Z"/>
+      <!-- Record body -->
+      <path class="rec-body" d="M 300 109 C 412 107, 506 191, 506 315 C 506 438, 413 522, 300 522 C 186 524, 94 439, 94 315 C 94 192, 188 107, 300 109 Z"/>
+      <path class="rec-grad" d="M 300 109 C 412 107, 506 191, 506 315 C 506 438, 413 522, 300 522 C 186 524, 94 439, 94 315 C 94 192, 188 107, 300 109 Z"/>
+      <path class="rec-sheen" d="M 300 109 C 412 107, 506 191, 506 315 C 506 438, 413 522, 300 522 C 186 524, 94 439, 94 315 C 94 192, 188 107, 300 109 Z"/>
+      <use href="#grooves"/>
+
+      <!-- Sketch marks -->
+      <path class="skm" d="M 100 248 Q 97 242, 103 238"/><path class="skm" d="M 502 252 Q 506 247, 500 243"/>
+      <path class="skm" d="M 500 378 Q 504 374, 506 378"/><path class="skm" d="M 98 382 Q 94 378, 97 374"/>
+      <path class="skm" d="M 295 520 Q 299 524, 303 521"/><path class="skm" d="M 305 519 Q 308 523, 302 524"/>
+
+      <!-- Center label -->
+      <path class="lbl-bg" d="M 300 226 C 347 224, 390 256, 390 315 C 390 374, 349 406, 300 406 C 250 408, 210 376, 210 315 C 210 255, 253 224, 300 226 Z"/>
+      <path class="lbl-ring" d="M 300 229 C 344 227, 386 258, 386 315 C 386 372, 346 403, 300 403 C 253 405, 214 373, 214 315 C 214 258, 256 227, 300 229 Z"/>
+      <path class="lbl-ring" d="M 300 278 C 322 277, 344 292, 344 315 C 344 339, 323 354, 300 354 C 277 355, 256 340, 256 315 C 256 291, 278 277, 300 278 Z"/>
+
+      <!--
+        Five sectors with hand-drawn curved boundaries.
+        Angles: CV=50°, Writings=80°, Odds &amp; Ends=84°, Updates=72°, Contact=74°
+        Control points bow the lines slightly for organic feel.
+      -->
+
+      <!-- CV: 270°→320° -->
+      <a href="cv.html" aria-label="CV">
+        <path class="sector" d="M 300 315 Q 310 272, 300 229 A 86 86 0 0 1 365.9 259.7 Q 335 288, 300 315 Z"/>
+        <text class="sect-txt" x="325" y="267">CV</text>
+      </a>
+
+      <!-- Writings: 320°→40° -->
+      <a href="writings.html" aria-label="Writings">
+        <path class="sector" d="M 300 315 Q 335 288, 365.9 259.7 A 86 86 0 0 1 365.9 370.3 Q 330 342, 300 315 Z"/>
+        <text class="sect-txt" x="355" y="312">Writings</text>
+      </a>
+
+      <!-- Odds &amp; Ends: 40°→124° -->
+      <a href="odds-and-ends.html" aria-label="Odds &amp; Ends">
+        <path class="sector" d="M 300 315 Q 330 342, 365.9 370.3 A 86 86 0 0 1 251.9 386.3 Q 275 352, 300 315 Z"/>
+        <text class="sect-txt" x="310" y="372">Odds &amp; Ends</text>
+      </a>
+
+      <!-- Updates: 124°→196° -->
+      <a href="updates.html" aria-label="Updates">
+        <path class="sector" d="M 300 315 Q 275 352, 251.9 386.3 A 86 86 0 0 1 217.3 291.3 Q 258 302, 300 315 Z"/>
+        <text class="sect-txt" x="248" y="330">Updates</text>
+      </a>
+
+      <!-- Contact: 196°→270° -->
+      <a href="contact.html" aria-label="Contact">
+        <path class="sector" d="M 300 315 Q 258 302, 217.3 291.3 A 86 86 0 0 1 300 229 Q 310 272, 300 315 Z"/>
+        <text class="sect-txt" x="265" y="272">Contact</text>
+      </a>
+
+      <!-- Center hole -->
+      <circle cx="300" cy="315" r="6" class="center-hole"/>
+
+      <!-- Tonearm: pivot at lower-right, needle on the record grooves -->
+      <ellipse cx="510" cy="478" rx="12" ry="10" class="ta-base"/>
+      <ellipse cx="510" cy="478" rx="5" ry="4" fill="#2a3a4a"/>
+      <!-- Arm wand from pivot to headshell (needle rests on groove area ~r=150 from center) -->
+      <path class="ta-wand" d="M 510 478 Q 450 430, 430 385 Q 415 358, 408 370"/>
+      <!-- Headshell touching record surface -->
+      <path class="ta-head" d="M 408 370 L 396 362 L 400 356 L 412 364 Z"/>
+      <!-- Counterweight stub behind pivot -->
+      <path class="ta-wand" d="M 510 478 Q 530 492, 536 496" stroke-width="2"/>
+
+      <!-- Extra sketch marks -->
+      <path class="skm" d="M 213 292 Q 210 288, 215 285"/><path class="skm" d="M 390 290 Q 393 286, 388 284"/>
+      <path class="skm" d="M 286 403 Q 289 406, 292 402"/><path class="skm" d="M 314 402 Q 311 406, 308 403"/>
+    </svg>
+
+    <p class="vinyl-hint">Click a section of the record to explore</p>
+  </div>
+
+  <!-- Page Content -->
+  <div class="content">
+    <div class="home-intro">
+
+I'm <span class="highlight-name">Yixi Ouyang</span>, a master's student in sociology. I am interested in work and occupations, methodology, and (Chinese) society in a broader sense. This site is where I collect my work, share things I'm thinking about, and keep track of what I'm up to.
+
+</div>
+
+<h2>What&rsquo;s Here</h2>
+<p><strong><a href="cv.html">CV</a></strong> — my academic background, research experience, and teaching.</p>
+<p><strong><a href="writings.html">Writings</a></strong> — both academic and non-academic writings.</p>
+<p><strong><a href="odds-and-ends.html">Odds &amp; Ends</a></strong> — I am an entry-level enthusiast of music, coffee, football, and whatever else I&rsquo;m into at the moment. The stuff that keeps me going when research gets heavy.</p>
+<p><strong><a href="updates.html">Updates</a></strong> — what I&rsquo;ve been doing lately.</p>
+<p><strong><a href="contact.html">Contact</a></strong> — if you want to get in touch about work, collaboration, or just to say hello.</p>
+  </div>
+
+  <!-- Profile Photo -->
+  
+
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <a href="index.html">Home</a><span class="nav-separator">·</span>
+    <a href="cv.html">CV</a><span class="nav-separator">·</span>
+    <a href="writings.html">Writings</a><span class="nav-separator">·</span>
+    <a href="odds-and-ends.html">Odds &amp; Ends</a><span class="nav-separator">·</span>
+    <a href="updates.html">Updates</a><span class="nav-separator">·</span>
+    <a href="contact.html">Contact</a>
+    <br><br>
+    <span class="last-updated">Last updated: June 2026</span>
+  </div>
+
+</div>
+</body>
+</html>
