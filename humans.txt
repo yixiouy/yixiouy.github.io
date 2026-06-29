@@ -1,0 +1,16 @@
+/* TEAM */
+  Creator: Yixi Ouyang
+  Contact: oyyx24[at]mails.tsinghua.edu.cn
+  GitHub: yixiouy
+  Site: https://yixiouy.github.io/
+
+/* SITE */
+  Last updated: 2026-06-30
+  Language: English, Chinese
+  Design inspiration: Howard S. Becker (howardsbecker.com)
+  Built with: Python (build.py), Markdown, hand-written HTML/CSS
+  Typefaces: Crimson Text (Latin), Noto Serif SC (Chinese) — self-hosted
+  Hosting: GitHub Pages
+
+/* THANKS */
+  Howard S. Becker — for showing that an academic website can be warm, personal, and handmade.

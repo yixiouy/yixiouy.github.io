@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Disallow AI crawlers that respect robots.txt
+# --- AI crawlers: disallow all ---
 User-agent: GPTBot
 Disallow: /
 
@@ -17,8 +17,28 @@ Disallow: /
 User-agent: Google-Extended
 Disallow: /
 
-# Allow all other bots
-User-agent: *
-Allow: /
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Omigilobot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
 
 Sitemap: https://yixiouy.github.io/sitemap.xml
