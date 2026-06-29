@@ -339,6 +339,73 @@ a.nonblock {
   }
 }
 
+/* --- Dark Mode --- */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #d0c8b8;
+    background-color: #1c1a16;
+  }
+
+  a:link {
+    color: #84c4dc;
+  }
+
+  a:visited {
+    color: #887868;
+  }
+
+  a:hover {
+    color: #a8dcec;
+  }
+
+  a.nonblock {
+    color: #d0c8b8;
+  }
+
+  .page-header {
+    border-color: #3a3530;
+  }
+
+  .content h1, .content h2, .content h3,
+  .page-title {
+    color: #f0e8d8;
+  }
+
+  .content blockquote {
+    border-color: #3a3530;
+    color: #a09888;
+  }
+
+  .content hr {
+    border-color: #3a3530;
+  }
+
+  .bottom-nav .nav-separator {
+    color: #5a5040;
+  }
+
+  .bottom-nav .last-updated {
+    color: #787060;
+  }
+
+  .vinyl-hint {
+    color: #807868;
+  }
+
+  .home-intro .highlight-name {
+    color: #f0e8d8;
+  }
+
+  .homepage-title .title-svg,
+  .site-title-sm .title-svg-sm {
+    filter: invert(0.9);
+  }
+
+  .profile-photo .photo-caption {
+    color: #807868;
+  }
+}
+
 /* --- Print --- */
 @media print {
   .vinyl-hero, .bottom-nav {
