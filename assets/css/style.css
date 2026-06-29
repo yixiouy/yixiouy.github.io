@@ -102,7 +102,7 @@ a.nonblock {
 }
 
 .site-title-sm .title-svg-sm {
-  width: 200px;
+  width: 250px;
   height: auto;
   opacity: 0.85;
 }
@@ -256,12 +256,23 @@ a.nonblock {
   font-style: italic;
 }
 
+/* --- Bottom Divider --- */
+.bottom-divider {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.divider-svg {
+  max-width: 550px;
+  width: 100%;
+  height: auto;
+}
+
 /* --- Bottom Navigation --- */
 .bottom-nav {
   text-align: center;
-  margin-top: 50px;
-  padding-top: 28px;
-  border-top: 1px solid #e0d8c8;
+  margin-top: 10px;
+  padding-top: 0;
 }
 
 .bottom-nav a {
@@ -321,6 +332,10 @@ a.nonblock {
   .bottom-nav a {
     margin: 0 6px 6px 6px;
     font-size: 15px;
+  }
+
+  .divider-svg {
+    max-width: 100%;
   }
 }
 
