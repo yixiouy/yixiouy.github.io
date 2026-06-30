@@ -96,8 +96,9 @@ a.nonblock {
   height: auto;
 }
 
-/* --- Sub-page: small site-title link (upper-left) --- */
+/* --- Sub-page: small site-title link --- */
 .site-title-sm {
+  text-align: center;
   margin-bottom: 24px;
 }
 

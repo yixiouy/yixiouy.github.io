@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no, email=no">
-  <meta name="color-scheme" content="light dark">
-  <meta name="robots" content="index, follow, noai, noimageai">
-  <meta name="author" content="Yixi Ouyang">
-  <link rel="llm-info" href="/llms.txt" type="text/plain">
-  <title>{{ page.title }} — {{ site.title }}</title>
-<link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-<div id="page">
-
-  <!-- Hand-drawn title -->
-  <div class="homepage-title">
-    <img src="assets/images/homepage-title.svg" alt="Yixi's Homepage" class="title-svg" width="420" height="70">
-  </div>
-
-  <!-- Vinyl Record Hero Navigation (inline SVG for clickable links) -->
-  <div class="vinyl-hero">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 660" class="vinyl-svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 660">
   <defs>
     <style>
       .rec-body { fill: #c8dae8; }
@@ -171,40 +147,3 @@
   <path class="skm" d="M 213 292 Q 210 288, 215 285"/><path class="skm" d="M 390 290 Q 393 286, 388 284"/>
   <path class="skm" d="M 286 403 Q 289 406, 292 402"/><path class="skm" d="M 314 402 Q 311 406, 308 403"/>
 </svg>
-
-    <p class="vinyl-hint">Click a section of the record to explore</p>
-  </div>
-
-  <!-- Page Content -->
-  <div class="content">
-    {{ content }}
-  </div>
-
-  <!-- Profile Photo -->
-  {% if page.show_photo %}
-  <div class="profile-photo">
-    <img src="assets/images/portrait.jpg" alt="Photo">
-    <p class="photo-caption">(Add your photo at assets/images/portrait.jpg)</p>
-  </div>
-  {% endif %}
-
-  <!-- Hand-drawn divider -->
-  <div class="bottom-divider">
-    <img src="assets/images/divider.svg" alt="" class="divider-svg">
-  </div>
-
-  <!-- Bottom Navigation -->
-  <div class="bottom-nav">
-    <a href="index.html">Home</a><span class="nav-separator">·</span>
-    <a href="cv.html">CV</a><span class="nav-separator">·</span>
-    <a href="writings.html">Writings</a><span class="nav-separator">·</span>
-    <a href="odds-and-ends.html">Odds &amp; Ends</a><span class="nav-separator">·</span>
-    <a href="updates.html">Updates</a><span class="nav-separator">·</span>
-    <a href="contact.html">Contact</a>
-    <br><br>
-    <span class="last-updated">Last updated: June 2026</span>
-  </div>
-
-</div>
-</body>
-</html>
