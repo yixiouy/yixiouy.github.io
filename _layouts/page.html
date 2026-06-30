@@ -40,6 +40,7 @@
 
   <!-- Bottom Navigation -->
   <div class="bottom-nav">
+
     <a href="index.html">Home</a><span class="nav-separator">·</span>
     <a href="cv.html">CV</a><span class="nav-separator">·</span>
     <a href="writings.html">Writings</a><span class="nav-separator">·</span>
@@ -48,8 +49,50 @@
     <a href="contact.html">Contact</a>
     <br><br>
     <span class="last-updated">Last updated: June 2026</span>
+    <span class="nav-separator">·</span>
+    <button id="lamp-toggle" class="lamp-toggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 68">
+        <defs>
+          <linearGradient id="lampConeGrad" x1="25" y1="33" x2="25" y2="66" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#ffcc66" stop-opacity="0.7"/>
+            <stop offset="100%" stop-color="#ffcc66" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <polygon class="lamp-cone" points="4,33 46,33 50,66 0,66"/>
+        <ellipse class="lamp-base-side" cx="25" cy="62" rx="13" ry="4"/>
+        <ellipse class="lamp-base-top" cx="25" cy="61" rx="13" ry="3.5"/>
+        <line class="lamp-arm" x1="23" y1="61" x2="31" y2="34"/>
+        <line class="lamp-arm" x1="31" y1="34" x2="23" y2="13"/>
+        <circle class="lamp-joint" cx="23" cy="61" r="2"/>
+        <circle class="lamp-joint" cx="31" cy="34" r="2.8"/>
+        <circle class="lamp-joint" cx="23" cy="13" r="2"/>
+        <path class="lamp-shade" d="M 16,13 L 30,13 C 35,19 41,27 46,33 L 4,33 C 9,27 15,19 16,13 Z"/>
+        <ellipse class="lamp-shade-rim" cx="25" cy="33" rx="21" ry="3"/>
+        <circle class="lamp-bulb" cx="25" cy="34" r="4.5"/>
+      </svg>
+    </button>
   </div>
 
 </div>
+
+<script>
+(function() {
+  var html = document.documentElement;
+  var lamp = document.getElementById('lamp-toggle');
+  var saved = localStorage.getItem('theme');
+  if (saved === 'dark' || saved === 'light') {
+    html.setAttribute('data-theme', saved);
+  }
+  lamp.addEventListener('click', function() {
+    var current = html.getAttribute('data-theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var actualDark = current === 'dark' || (!current && prefersDark);
+    var next = actualDark ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+})();
+</script>
+
 </body>
 </html>

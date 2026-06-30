@@ -4,6 +4,34 @@
    Crimson Text (self-hosted) + Noto Serif SC (self-hosted)
    ============================================= */
 
+/* --- CSS Variables (light mode defaults) --- */
+:root {
+  --text: #2d2820;
+  --bg: #fdfaf5;
+  --link: #5a8aaa;
+  --link-visited: #7a9aaa;
+  --link-hover: #3a6a8a;
+  --heading: #1a1510;
+  --blockquote-border: #d8d0c0;
+  --blockquote-text: #6a6050;
+  --hr: #e0d8c8;
+  --nav-sep: #d0c8b8;
+  --nav-meta: #b0a898;
+  --hint: #a09888;
+  --page-header-border: #e0d8c8;
+  --title-filter: none;
+  --photo-caption: #a09888;
+  --photo-caption-dark: #807868;
+  --lamp-base-side: #3a4550;
+  --lamp-base-top: #4a5560;
+  --lamp-arm: #3a4550;
+  --lamp-shade: #3a4550;
+  --lamp-shade-rim: #2d3842;
+  --lamp-bulb: #5a6570;
+  --lamp-glow: none;
+  --lamp-cone-opacity: 0;
+}
+
 /* --- Self-hosted fonts --- */
 @font-face {
   font-family: 'Crimson Text';
@@ -41,39 +69,41 @@ body {
   font-family: 'Crimson Text', Palatino, 'Palatino Linotype', 'Noto Serif SC', serif;
   font-size: 17px;
   line-height: 1.65;
-  color: #2d2820;
-  background-color: #fdfaf5;
+  color: var(--text);
+  background-color: var(--bg);
   text-rendering: optimizeLegibility;
   -moz-font-feature-settings: 'liga';
   -webkit-font-feature-settings: 'liga';
   font-feature-settings: 'liga';
+  transition: color 0.4s, background-color 0.4s;
 }
 
 /* --- Links (record blue, not Becker red) --- */
 a:link {
-  color: #5a8aaa;
+  color: var(--link);
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-thickness: 0.8px;
+  transition: color 0.4s;
 }
 
 a:visited {
-  color: #7a9aaa;
+  color: var(--link-visited);
   text-decoration: underline;
 }
 
 a:hover {
-  color: #3a6a8a;
+  color: var(--link-hover);
   text-decoration: underline;
 }
 
 a:active {
-  color: #5a8aaa;
+  color: var(--link);
   text-decoration: underline;
 }
 
 a.nonblock {
-  color: #2d2820;
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -94,6 +124,8 @@ a.nonblock {
   max-width: 420px;
   width: 100%;
   height: auto;
+  filter: var(--title-filter);
+  transition: filter 0.4s;
 }
 
 /* --- Sub-page: small site-title link --- */
@@ -106,6 +138,8 @@ a.nonblock {
   width: 250px;
   height: auto;
   opacity: 0.85;
+  filter: var(--title-filter);
+  transition: filter 0.4s;
 }
 
 .site-title-sm a { text-decoration: none; }
@@ -127,10 +161,11 @@ a.nonblock {
 .vinyl-hint {
   font-family: 'Crimson Text', Palatino, 'Noto Serif SC', serif;
   font-size: 15px;
-  color: #a09888;
+  color: var(--hint);
   font-style: italic;
   margin-top: 1px;
   text-align: center;
+  transition: color 0.4s;
 }
 
 /* --- Sub-page Header --- */
@@ -138,7 +173,8 @@ a.nonblock {
   max-width: 650px;
   margin: 0 auto 36px auto;
   padding-bottom: 18px;
-  border-bottom: 1px solid #e0d8c8;
+  border-bottom: 1px solid var(--page-header-border);
+  transition: border-color 0.4s;
 }
 
 .page-title {
@@ -146,8 +182,9 @@ a.nonblock {
   font-size: 26px;
   font-weight: 600;
   line-height: 1.4;
-  color: #1a1510;
+  color: var(--heading);
   margin-top: 4px;
+  transition: color 0.4s;
 }
 
 /* --- Content Area --- */
@@ -162,7 +199,8 @@ a.nonblock {
   font-weight: 600;
   line-height: 1.4;
   margin-bottom: 24px;
-  color: #1a1510;
+  color: var(--heading);
+  transition: color 0.4s;
 }
 
 .content h2 {
@@ -172,7 +210,8 @@ a.nonblock {
   line-height: 1.4;
   margin-top: 32px;
   margin-bottom: 12px;
-  color: #1a1510;
+  color: var(--heading);
+  transition: color 0.4s;
 }
 
 .content h3 {
@@ -183,7 +222,8 @@ a.nonblock {
   line-height: 1.4;
   margin-top: 24px;
   margin-bottom: 8px;
-  color: #1a1510;
+  color: var(--heading);
+  transition: color 0.4s;
 }
 
 .content p {
@@ -207,15 +247,17 @@ a.nonblock {
 .content blockquote {
   margin: 0 0 16px 0;
   padding: 8px 20px;
-  border-left: 3px solid #d8d0c0;
-  color: #6a6050;
+  border-left: 3px solid var(--blockquote-border);
+  color: var(--blockquote-text);
   font-style: italic;
+  transition: border-color 0.4s, color 0.4s;
 }
 
 .content hr {
   border: none;
-  border-top: 1px solid #e0d8c8;
+  border-top: 1px solid var(--hr);
   margin: 32px 0;
+  transition: border-color 0.4s;
 }
 
 .content em {
@@ -233,7 +275,8 @@ a.nonblock {
 
 .home-intro .highlight-name {
   font-weight: 600;
-  color: #2d2820;
+  color: var(--text);
+  transition: color 0.4s;
 }
 
 /* --- Photo --- */
@@ -252,9 +295,10 @@ a.nonblock {
 
 .profile-photo .photo-caption {
   font-size: 14px;
-  color: #a09888;
+  color: var(--photo-caption);
   margin-top: 8px;
   font-style: italic;
+  transition: color 0.4s;
 }
 
 /* --- Bottom Divider --- */
@@ -281,7 +325,7 @@ a.nonblock {
   margin: 0 14px 8px 14px;
   font-family: 'Crimson Text', Palatino, 'Noto Serif SC', serif;
   font-size: 18px;
-  color: #5a8aaa;
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -290,14 +334,95 @@ a.nonblock {
 }
 
 .bottom-nav .nav-separator {
-  color: #d0c8b8;
+  color: var(--nav-sep);
   margin: 0 2px;
+  transition: color 0.4s;
 }
 
 .bottom-nav .last-updated {
-  color: #b0a898;
+  color: var(--nav-meta);
   font-size: 14px;
   font-style: italic;
+  transition: color 0.4s;
+}
+
+/* =============================================
+   Desk Lamp — Dark Mode Toggle
+   Inline with "Last updated" text
+   ============================================= */
+
+.lamp-toggle {
+  display: inline-block;
+  width: 22px;
+  height: 30px;
+  margin: 0 0 0 4px;
+  vertical-align: middle;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.25s;
+}
+
+.lamp-toggle:hover {
+  transform: scale(1.15);
+}
+
+.lamp-toggle:active {
+  transform: scale(0.9);
+}
+
+.lamp-toggle:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Lamp SVG parts */
+.lamp-cone {
+  fill: url(#lampConeGrad);
+  opacity: var(--lamp-cone-opacity);
+  transition: opacity 0.5s;
+}
+
+.lamp-base-side {
+  fill: var(--lamp-base-side);
+  transition: fill 0.4s;
+}
+
+.lamp-base-top {
+  fill: var(--lamp-base-top);
+  transition: fill 0.4s;
+}
+
+.lamp-arm {
+  fill: none;
+  stroke: var(--lamp-arm);
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke 0.4s;
+}
+
+.lamp-joint {
+  fill: var(--lamp-arm);
+  transition: fill 0.4s;
+}
+
+.lamp-shade {
+  fill: var(--lamp-shade);
+  transition: fill 0.4s;
+}
+
+.lamp-shade-rim {
+  fill: var(--lamp-shade-rim);
+  transition: fill 0.4s;
+}
+
+.lamp-bulb {
+  fill: var(--lamp-bulb);
+  transition: fill 0.4s, filter 0.4s;
+  filter: var(--lamp-glow);
 }
 
 /* --- Responsive --- */
@@ -340,76 +465,100 @@ a.nonblock {
   }
 }
 
-/* --- Dark Mode --- */
+/* =============================================
+   Dark Mode — browser preference
+   (only when user hasn't manually chosen light)
+   ============================================= */
 @media (prefers-color-scheme: dark) {
-  body {
-    color: #d0c8b8;
-    background-color: #1c1a16;
+  :root:not([data-theme="light"]) {
+    --text: #d0c8b8;
+    --bg: #1c1a16;
+    --link: #84c4dc;
+    --link-visited: #887868;
+    --link-hover: #a8dcec;
+    --heading: #f0e8d8;
+    --blockquote-border: #3a3530;
+    --blockquote-text: #a09888;
+    --hr: #3a3530;
+    --nav-sep: #5a5040;
+    --nav-meta: #787060;
+    --hint: #807868;
+    --page-header-border: #3a3530;
+    --title-filter: invert(0.9);
+    --photo-caption: #807868;
+    /* lamp ON state */
+    --lamp-base-side: #5a6570;
+    --lamp-base-top: #6a7580;
+    --lamp-arm: #6a7580;
+    --lamp-shade: #4a5560;
+    --lamp-shade-rim: #3a4550;
+    --lamp-bulb: #ffcc66;
+    --lamp-glow: drop-shadow(0 0 6px rgba(255, 180, 60, 0.7));
+    --lamp-cone-opacity: 0.25;
   }
+}
 
-  a:link {
-    color: #84c4dc;
-  }
+/* =============================================
+   Dark Mode — manual override
+   ============================================= */
+:root[data-theme="dark"] {
+  --text: #d0c8b8;
+  --bg: #1c1a16;
+  --link: #84c4dc;
+  --link-visited: #887868;
+  --link-hover: #a8dcec;
+  --heading: #f0e8d8;
+  --blockquote-border: #3a3530;
+  --blockquote-text: #a09888;
+  --hr: #3a3530;
+  --nav-sep: #5a5040;
+  --nav-meta: #787060;
+  --hint: #807868;
+  --page-header-border: #3a3530;
+  --title-filter: invert(0.9);
+  --photo-caption: #807868;
+  /* lamp ON */
+  --lamp-base-side: #5a6570;
+  --lamp-base-top: #6a7580;
+  --lamp-arm: #6a7580;
+  --lamp-shade: #4a5560;
+  --lamp-shade-rim: #3a4550;
+  --lamp-bulb: #ffcc66;
+  --lamp-glow: drop-shadow(0 0 6px rgba(255, 180, 60, 0.7));
+  --lamp-cone-opacity: 0.25;
+}
 
-  a:visited {
-    color: #887868;
-  }
-
-  a:hover {
-    color: #a8dcec;
-  }
-
-  a.nonblock {
-    color: #d0c8b8;
-  }
-
-  .page-header {
-    border-color: #3a3530;
-  }
-
-  .content h1, .content h2, .content h3,
-  .page-title {
-    color: #f0e8d8;
-  }
-
-  .content blockquote {
-    border-color: #3a3530;
-    color: #a09888;
-  }
-
-  .content hr {
-    border-color: #3a3530;
-  }
-
-  .bottom-nav .nav-separator {
-    color: #5a5040;
-  }
-
-  .bottom-nav .last-updated {
-    color: #787060;
-  }
-
-  .vinyl-hint {
-    color: #807868;
-  }
-
-  .home-intro .highlight-name {
-    color: #f0e8d8;
-  }
-
-  .homepage-title .title-svg,
-  .site-title-sm .title-svg-sm {
-    filter: invert(0.9);
-  }
-
-  .profile-photo .photo-caption {
-    color: #807868;
-  }
+/* --- Manual light override (overrides browser dark preference) --- */
+:root[data-theme="light"] {
+  --text: #2d2820;
+  --bg: #fdfaf5;
+  --link: #5a8aaa;
+  --link-visited: #7a9aaa;
+  --link-hover: #3a6a8a;
+  --heading: #1a1510;
+  --blockquote-border: #d8d0c0;
+  --blockquote-text: #6a6050;
+  --hr: #e0d8c8;
+  --nav-sep: #d0c8b8;
+  --nav-meta: #b0a898;
+  --hint: #a09888;
+  --page-header-border: #e0d8c8;
+  --title-filter: none;
+  --photo-caption: #a09888;
+  /* lamp OFF */
+  --lamp-base-side: #3a4550;
+  --lamp-base-top: #4a5560;
+  --lamp-arm: #3a4550;
+  --lamp-shade: #3a4550;
+  --lamp-shade-rim: #2d3842;
+  --lamp-bulb: #5a6570;
+  --lamp-glow: none;
+  --lamp-cone-opacity: 0;
 }
 
 /* --- Print --- */
 @media print {
-  .vinyl-hero, .bottom-nav {
+  .vinyl-hero, .bottom-nav, .lamp-toggle {
     display: none;
   }
 
