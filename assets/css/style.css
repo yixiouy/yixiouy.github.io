@@ -187,6 +187,23 @@ a.nonblock {
   transition: color 0.4s;
 }
 
+/* --- Back link (sub-page breadcrumb, bottom-right) --- */
+.back-link {
+  max-width: 650px;
+  margin: 0 auto 12px auto;
+  text-align: right;
+  font-family: 'Crimson Text', Palatino, 'Noto Serif SC', serif;
+  font-size: 15px;
+}
+.back-link a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.4s;
+}
+.back-link a:hover {
+  text-decoration: underline;
+}
+
 /* --- Content Area --- */
 .content {
   max-width: 650px;
