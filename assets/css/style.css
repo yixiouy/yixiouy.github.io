@@ -206,6 +206,7 @@ a.nonblock {
 
 /* --- Content Area --- */
 .content {
+  width: 100%;
   max-width: 650px;
   margin: 0 auto;
 }
