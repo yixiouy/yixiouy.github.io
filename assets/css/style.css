@@ -254,6 +254,17 @@ a.nonblock {
   height: auto;
 }
 
+/* Side-by-side image rows */
+.content .img-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.content .img-row img {
+  flex: 1;
+  min-width: 0;
+}
+
 .content ul, .content ol {
   margin: 0 0 16px 28px;
 }
