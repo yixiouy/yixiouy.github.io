@@ -248,6 +248,11 @@ a.nonblock {
   line-height: 1.7;
 }
 
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
 .content ul, .content ol {
   margin: 0 0 16px 28px;
 }
