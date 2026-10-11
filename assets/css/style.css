@@ -596,7 +596,7 @@ a.nonblock {
 /* --- Manual light override (overrides browser dark preference) --- */
 :root[data-theme="light"] {
     --text: #2d2820;
-    --bg: #fdfaf5;
+    --bg: #ffffff;
     --link: #5a8aaa;
     --link-visited: #7a9aaa;
     --link-hover: #3a6a8a;
